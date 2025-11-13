@@ -1,0 +1,17 @@
+<?php
+include("conexion.php");
+$id= $_POST['id'];
+$nombre= $_POST['nombre'];
+$edad=$_POST['edad'];
+$telefono= $_POST['telefono'];
+$sql="INSERT INTO registro(id,nombre,edad,telefono) VALUES('$id'.'$nombre'.'$edad'.'$telefono')";
+if($conexion->query($sql)===TRUE){
+    echo"<script>
+        alert("Alumno eliminado correctamente");
+        window.location.href='practica1.html';
+    </script>"
+}else{
+    echo"error:".$sql."<br>".$conexion->error;
+}
+$conexion->close();
+?>

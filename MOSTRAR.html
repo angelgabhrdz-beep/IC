@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+    <style>
+
+body {
+            font-family:Arial; background: white; color:rgb(26, 240, 211); text-align:center;}
+        table {
+            width: 80%; margin: auto; border-collapse: collapse; background: white; color: black; }
+        th, td {
+             border: 1px solid #ccc; padding: 5px;}
+        th {
+             background: #00465d;}
+        a.btn {
+            padding: 5px 10px; border-radius: 5px; text-decoration: none; color: white;}
+        .editar {
+             background: #6495ed; }
+        .eliminar {
+             background: #b22222;}
+        .nuevo {
+            display: inline-block; margin: 15px; padding: 10px 15px; background: #5F9ea0; color: black; border-radius: 6px;}
+
+    </style>
+    
+</head>
+<body>
+
+        
+    <h2>Lista de Alumnos</h2>
+
+<center>
+    <a class="nuevo" href="FORMU.html"> Registrar Nuevo Alumno</a>
+<table>
+    <tr>
+        <th>id_alumno</th>
+        <th>Nombre_alumno</th>
+        <th>Apellido_alumno</th>
+        <th>Fecha_nac</th>
+        <th>Direccion_alumno</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Sexo</th>
+        <th>Acciones</th>
+        
+    </tr>
+    
+    <tr>
+        <td><?= $fila['id_alumno'] ?></td>
+        <td><?=$fila['nombre_alumno']?></td>
+      <td><?= $fila['apellido_alumno'] ?></td>
+      <td><?= $fila['fecha_nac'] ?></td>
+      <td><?= $fila['dirreccion'] ?></td>
+      <td><?= $fila['telefono'] ?></td>
+      <td><?= $fila['email'] ?></td>
+      <td><?= $fila['sexo'] ?></td>
+    
+    <td>
+      
+    <a class="btn editar" href="pag_exam.html?id=<?= $fila['id'] ?>">Editar</a>
+                <a class="btn eliminar" href="DELETE.html?id=<?= $fila['id'] ?>" onclick="return confirm('¿Eliminar?')">Eliminar</a>
+            </td>
+
+        </tr>
+    
+</table>
+
+</center>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+             background-color:rgb(26, 240, 211) ;
+              padding: 20px; }
+        table {
+            width: 50%;
+             border-collapse: collapse;
+              background: white;
+              
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align:center;
+            
+            border-radius:20px;
+        }
+        th, td {
+             border: 1px solid #19b8f7;
+             padding: 8px; 
+             text-align: center;
+            }
+        th {
+             background: #00465d; 
+            color: white; 
+        }
+        a.btn {
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            position: relative;
+        }
+        .editar {
+             background: #6495ed; 
+            }
+        .eliminar {
+             background: #b22222;
+             }
+        .nuevo {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: #5F9ea0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        h2{
+            color:white;
+            text-align:center;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>Lista de calificaciones</h2>
+
+<center>
+    <a class="nuevo" href="FORMCLF.html"> Registrar calificacion</a>
+<table>
+    <tr>
+        <th>id_materia</th>
+        <th>id_docente</th>
+        <th>id_alumno</th>
+        <th>calificacion</th>
+        <th>fecha_calificacion</th>
+        <th>Acciones</th>
+        
+    </tr>
+    
+    <tr>
+        <td><?= $fila['id_materia'] ?></td>
+        <td><?=$fila['id_docente']?></td>
+      <td><?= $fila['id_alumno'] ?></td>
+      <td><?= $fila['calificacion'] ?></td>
+      <td><?= $fila['fecha_calificacion'] ?></td>
+    
+    <td>
+      
+    <a class="btn editar" href="pag_exam.html?id=<?= $fila['id'] ?>">Editar</a>
+                <a class="btn eliminar" href="DELETE2.html?id=<?= $fila['id'] ?>" onclick="return confirm('¿Eliminar?')">Eliminar</a>
+            </td>
+
+        </tr>
+    
+</table>
+
+</center>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+<?php
+include("CONX.php");
+$id= $_POST['id_alumno'];
+$nombre= $_POST['nombre-alumno'];
+$edad=$_POST['edad_alumno'];
+$telefono= $_POST['telefono_alumno'];
+$sql="INSERT INTO registro(id,nombre,edad,telefono) VALUES('$id'.'$nombre'.'$edad'.'$telefono')";
+if($conexion->query($sql)===TRUE){
+    echo"<script>
+        alert("Alumno registrado correctamente");
+        window.location.href='practica1.html';
+    </script>"
+}else{
+    echo"error:".$sql."<br>".$conexion->error;
+}
+$conexion->close();
+?>

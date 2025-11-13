@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+             background-color:rgb(26, 240, 211) ;
+              padding: 20px; }
+        table {
+            width: 50%;
+             border-collapse: collapse;
+              background: white;
+              
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align:center;
+            
+            border-radius:20px;
+        }
+        th, td {
+             border: 1px solid #19b8f7;
+             padding: 8px; 
+             text-align: center;
+            }
+        th {
+             background: #00465d; 
+            color: white; 
+        }
+        a.btn {
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            position: relative;
+        }
+        .editar {
+             background: #6495ed; 
+            }
+        .eliminar {
+             background: #b22222;
+             }
+        .nuevo {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: #5F9ea0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        h2{
+            color:white;
+            text-align:center;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>Lista de Docentes</h2>
+
+<center>
+    <a class="nuevo" href="FROMDC.html"> Registrar nuevo docente</a>
+<table>
+    <tr>
+        <th>id_docente</th>
+        <th>nombre_docente</th>
+        <th>apellido_docente</th>
+        <th>DNI_docente</th>
+        <th>Acciones</th>
+        <th>especialidad_docente</th>
+        <th>email_docente</th>
+        <th>telefono_docente</th>
+        <th>fechacontrato_docente</th>
+        
+    </tr>
+    
+    <tr>
+        <td><?= $fila['id'] ?></td>
+        <td><?=$fila['nombre']?></td>
+      <td><?= $fila['edad'] ?></td>
+      <td><?= $fila['telefono'] ?></td>
+      
+    
+    <td>
+      
+    <a class="btn editar" href="pag_exam.html?id=<?= $fila['id'] ?>">Editar</a>
+                <a class="btn eliminar" href="DELETE2.html?id=<?= $fila['id'] ?>" onclick="return confirm('¿Eliminar?')">Eliminar</a>
+            </td>
+
+        </tr>
+    
+</table>
+
+</center>
+
+</body>
+</html>

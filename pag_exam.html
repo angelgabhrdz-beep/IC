@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="EXA.css">
+    <meta charset="UTF-8">
+    <title>EDITAR</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        input{
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            background: #add8e6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+        a{
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #0066cc;
+
+        }
+    </style>
+    </head>
+    <body>
+        <form action="pag_exam2.html" method="POST">
+            <center><h2>EDITAR</h2></center>
+            
+            <legend>
+            <form action="pag_exam2.html" method="post">
+                <label for="">ID:</label>
+          <input type="number" name="id" id="id" required placeholder="id">
+          <br>
+          <br>
+          <label for="">NOMBRE:</label>
+          <input type="text" name="nombre" id="nombre" required placeholder="nombre">
+          <br>
+          <br>
+          <label for="">EDAD:</label>
+          <input type="text" name="edad" id="edad" required placeholder="Solo edad con numero entero">
+          <br>
+          <br>
+          <label for="">TELEFONO:</label>
+          <input type="tel" name="telefono" id="telefono" required placeholder="Num telefono">
+          <br>
+          <br>
+         <button>
+          <input type="submit" value="Enviar">
+          </button>
+
+        <button type="submit">Actualizar</button>
+        <a href="MOSTRAR.php">Volver</a>
+        </form>
+    </body>
+    </html>
+
+
+
+    
